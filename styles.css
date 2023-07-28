@@ -40,6 +40,7 @@ main {
     color: #F2F2F2;
     margin-top: 0;
     margin-bottom: 0;
+    text-transform: uppercase;
 }
 .description {
     font-family: 'Lexend Deca', sans-serif;
