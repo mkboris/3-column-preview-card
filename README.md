@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/mkboris/3-column-preview-card
-- Live Site URL: https://3-column-preview-card-three-zeta.vercel.app/
+- Live Site URL: https://mkboris.github.io/3-column-preview-card/
   
 ### Built with
 
