@@ -1,0 +1,232 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  border: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 20.4375rem;
+  margin: 4.5625rem 0 6.4375rem;
+}
+
+.icon {
+  margin-bottom: 2.1875rem;
+}
+
+.heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 1.5625rem;
+}
+
+.description {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 167%;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1.5625rem;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+a {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 167%;
+  background-color: #f2f2f2;
+  text-decoration: none;
+  border-radius: 1.5625rem;
+  padding: 0.6875rem 1.875rem;
+  border: 2px solid #ffffff;
+}
+
+a:hover {
+  color: #ffffff;
+  background-color: transparent;
+  transition: background-color 2s;
+}
+
+.sedan-link {
+  color: hsl(31, 77%, 52%);
+}
+.suv-link {
+  color: hsl(184, 100%, 22%);
+}
+.luxury-link {
+  color: hsl(179, 100%, 13%);
+}
+
+.sedan,
+.suv,
+.luxury {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 3rem;
+}
+
+.sedan {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.luxury {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.sedan {
+  background: hsl(31, 77%, 52%);
+}
+.suv {
+  background: hsl(184, 100%, 22%);
+}
+.luxury {
+  background: hsl(179, 100%, 13%);
+}
+
+@media screen and (min-width: 50.4375rem) {
+  .container {
+    flex-direction: row;
+    max-width: 57.5rem;
+    margin: auto;
+  }
+
+  .description {
+    margin-bottom: 5.1875rem;
+  }
+
+  .sedan {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .luxury {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
